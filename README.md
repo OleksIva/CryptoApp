@@ -1,3 +1,20 @@
+### Not all features are implemented, I am currently in the process, and I will complete the project during the weekend. Thank you for your understanding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
