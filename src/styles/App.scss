@@ -29,14 +29,15 @@ $container-xl: 0 135px;
 .intro-section {
   padding: 0 135px;
   background-color: $primary-color;
-  background-image: url(./assets/bg.png);
+  // background-image: url(./assets/bg.png);
+  background-image: url(../assets/bg.png);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
   height: 100vh;
   &__second-layer {
     height: 100vh;
-    background-image: url(./assets/shapes.png);
+    background-image: url(../assets/shapes.png);
     background-position: center; 
     background-repeat: no-repeat; 
   }
@@ -81,6 +82,10 @@ $container-xl: 0 135px;
     font-weight: 200;
     color: white;
     font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      color:  rgba(235, 87, 87, 1);
+    }
   }
 }
 
@@ -122,8 +127,37 @@ h1 {
 
 .coin-app {
   background: $primary-color;
-  &__wrapper {
-    margin: 150px 0;
+  padding: 40px 0 ;
+  .wrapper {
+    margin: 20px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .navigation__button {
+    border: none;
+    background: none;
+    color: #e6dcf9;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &:hover {
+    color: #8d7bae;
+  }
+  }
+  .page-button {
+    border: none;
+    background: none;
+    color: #e6dcf9;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      color: #8d7bae;
+    }
   }
 }
 
@@ -144,13 +178,14 @@ h1 {
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
   width: 900px;
+
 }
 
 .coin {
   display: flex;
   align-items: center;
   padding-right: 24px;
-  min-width: 300px;
+  min-width: 250px;
   color: white;
 
   &-search {
@@ -175,31 +210,36 @@ h1 {
 
   &-symbol {
     text-transform: uppercase;
+    margin-left: auto;
   }
 
   &-data {
-    display: flex;
-    text-align: right;
-    justify-content: space-between;
+    display: grid;
+    // grid-template-columns: 100px 100px 15px 1fr;
+    grid-template-columns: 20% 22% 15% 40%;
+    gap: 16px;
+    text-align: center;
     width: 100%;
     color: white;
-
-    &-price {
-      width: 110px;
-    }
-
-    &-volume {
-      width: 155px;
-    }
-
-    &-marketcap {
-      width: 230px;
-    }
-
-    &-percent {
-      width: 100px;
-    }
   }
+  
+  &-price {
+    // text-align: left;
+  }
+
+  &-volume {
+
+  }
+
+  &-marketcap {
+    text-align: left;
+    // padding-left: 40px;
+  }
+
+  &-percent {
+
+  }
+  
 }
 
 
@@ -280,6 +320,7 @@ h1 {
 
   &__link-button {
     margin-right: 30px;
+    cursor: pointer;
   }
 
   &__link-container {
@@ -311,6 +352,123 @@ h1 {
         transform: translate(90%, -180%);
     }
   }
+  }
+
+
+
+
+
+
+  .favorite-button {
+    margin-right: 10px; /* Регулируйте отступы по вашему усмотрению */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Регулируйте отступы по вашему усмотрению */
+  }
+
+  .coin-row {
+    display: flex;
+    align-items: center;
+    /* Добавьте другие стили, если необходимо */
+  }
+
+
+  .navigation {
+    // height: 20px;
+    // background: grey;
+    // a {
+    //   background: #000;
+    //   height: 10px;
+    //   width: 10px;
+    // }
+  }
+
+
+  .favorite-button.active img {
+    filter: invert(68%) sepia(19%) saturate(2471%) hue-rotate(344deg) brightness(90%) contrast(94%);
+  }
+
+  .favorite-button {
+    background: none;
+    border: none;
+
+  }
+
+  .favorite-button img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(6015%) hue-rotate(180deg) brightness(91%) contrast(101%);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .news {
+    min-width: 900px;
+    text-align: center;
+    h2 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 45px;
+      padding-top: 100px;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 33px;
+    }
+    .card {
+      width: 368px;
+      height: 413px;
+      border-radius: 10px;
+      margin-bottom: 110px;
+      background: white;
+      &__image{
+      }
+      &__title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 25px 19px 0;
+        text-align: left;
+      }
+    &__info {
+      font-family: Open Sans;
+      color: rgba(79, 79, 79, 1);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 13px 19px 0;
+      text-align: left;
+    }
+    &__footer {
+      font-family: Open Sans;
+      color: rgba(79, 79, 79, 1);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      display: flex;
+      justify-content: space-between;
+      margin: 28px 19px 25px;
+    }
+    }
+  }
+
+  .news-wrapper {
+    background: rgba(255, 246, 251, 1);
   }
 
 

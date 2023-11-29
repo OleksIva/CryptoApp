@@ -4,7 +4,7 @@ import intro2 from '../assets/intro2.svg';
 import intro3 from '../assets/intro3.svg';
 
 function PlatformHighlights() {
-    return(<section className="platform-highlights">
+    return(<section className="platform-highlights"  data-aos="fade-up">
         <h2>The most trusted cryptocurrency platform</h2>
         <ul className="platform-highlights__list">
             <li className="platform-highlights__list-item">
